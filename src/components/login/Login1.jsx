@@ -44,7 +44,7 @@ const login = () => {
       if (response.ok) {
         localStorage.setItem("token", result.token);
         localStorage.setItem("userId", result.id);
-        window.location.href = "landing.html"; // or use React Router
+        navigate("/landing");
       } else {
         setMessage(result.error || "Login failed.");
       }
